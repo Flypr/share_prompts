@@ -1,3 +1,13 @@
 export async function GET(request) {
-    return new Response('Hello, Next.js!')
+    // Handle GET request for /api/users
+    // Retrieve the users from the database or any data source
+    const users = [
+        { id: 1, name: 'John' },
+        { id: 2, name: 'Jane' },
+        { id: 3, name: 'Bob' }
+    ];
+
+    // Send users as a response
+    return new Response(JSON.stringify(users));
 }
+
