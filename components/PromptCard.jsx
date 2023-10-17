@@ -43,8 +43,8 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
         <div className='copy_btn' onClick={handleCopy}>
           <Image 
             src={copied === post.prompt
-              ? 'assets/images/tick.svg'
-              : 'assets/images/copy.svg'
+              ? 'assets/icons/tick.svg'
+              : 'assets/icons/copy.svg'
             }
             width={12}
             height={12}
@@ -60,7 +60,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
         className='font-inter text-sm blue_gradient cursor_pointer'
         onClick={() => handleTagClick && handleTagClick(post.tag)}
       >
-        {post.tag}
+        #{post.tag}
       </p>
 
       {session?.user.id === post.creator._id && pathName === '/profile' && (
